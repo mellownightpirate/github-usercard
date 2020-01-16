@@ -111,15 +111,12 @@ function githubCard (data) {
 
   profilePic.src = data.avatar_url;
   profilePic.alt = "Github Profile Picture";
-  githubUrl.href = data.html_url;
-
-// 5. Add content
-
   name.textContent = data.name;
   username.textContent = data.login;
   location.textContent = `Location: ${data.location}`;
   profile.textContent = `Profile: ${githubUrl}`;
   githubUrl.textContent = data.html_url;
+  githubUrl.href = data.html_url;
   followers.textContent = `Followers: ${data.followers}`;
   following.textContent = `Following: ${data.following}`;
   bio.textContent = `Bio: ${data.bio}`;
@@ -129,7 +126,7 @@ function githubCard (data) {
 // 6. Return card
   
   return card;
-}
+};
 
 
 /* List of LS Instructors Github username's: 
